@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embassy Contract</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+            body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .container3 {
+            max-width: 800px;
+            padding: 7px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header{
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        header h1{
+            margin-top: 15px;
+            font-size: 32px;
+            font-weight: 500;
+            color: rgb(48, 48, 116);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid container3">
+            <a class="navbar-brand" href="#">MyWebsite logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">New Contract</a>
+                    </li>
+                    <!-- Language Dropdown -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Language
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">Arabic</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="text-center py-3">
+        <h1>Standard Two-Party Recruitment / Employment 
+            Contract (Male / Female Domestic Worker)</h1>
+    </header>
+    <div class="container my-4">
+        <form action="/submit-form" method="post">
+            <!-- First Party Info Section -->
+            <fieldset class="border p-3 mb-4">
+                <legend class="w-auto" style="font-weight: 600; color: rgb(48, 48, 116);">First Party Information</legend>
+                            
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Full Name <span style="font-weight: 700;" class="text-danger">*Eng</span></label>
+                        <input type="text" id="FPartyNameEN" name="name" class="form-control" placeholder="In English" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Full Name <span style="font-weight: 700;" class="text-primary">*Arb</span></label>
+                        <input type="text" id="FPartyNameAR"  class="form-control" placeholder="In Arabic" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Nationality <span style="font-weight: 700;" class="text-danger">*Eng</span></label>
+                        <input type="text" id="FPartyNationalityEN"  class="form-control" placeholder="In English" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Nationality <span style="font-weight: 700;" class="text-primary">*Arb</span></label>
+                        <input type="text" id="FPartyNationalityAR"  class="form-control" placeholder="In Arabic" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="message" class="form-label">Address <span style="font-weight: 700;" class="text-danger">*Eng</span></label>
+                        <textarea id="FPartyAddressEN" name="message" class="form-control" rows="2" placeholder="Your Address in english"></textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="message" class="form-label">Address <span style="font-weight: 700;" class="text-primary">*Arb</span></label>
+                        <textarea id="FPartyAddressAR" name="message" class="form-control" rows="2" placeholder="Your Address in arabic"></textarea>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="city" class="form-label">Telephone No</label>
+                        <input type="number" id="FPartyTelephoneNo" name="city" class="form-control" placeholder="Your Telephone Number">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="residenceType" class="form-label">Residence Type</label>
+                        <select id="residenceType" name="residenceType" class="form-select" required>
+                            <option value="">Select Residence Type</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="house">House</option>
+                            <option value="villa">Villa</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Civil ID No</label>
+                        <input type="number" id="CivilId"  class="form-control" placeholder="Your Civil ID Number" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="address" class="form-label">Number of Family Members</label>
+                        <input type="number" id="FamilyMembers"  class="form-control" placeholder="No of Family Members">
+                    </div>
+                </div>
+             </fieldset>
+
+
+            <!-- seconed Party Info Section -->
+            <fieldset class="border p-3 mb-4">
+                <legend class="w-auto" style="font-weight: 600; color: rgb(48, 48, 116);">Seconed Party Information</legend>
+                            
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Full Name <span style="font-weight: 700;" class="text-danger">*Eng</span></label>
+                        <input type="text" id="SecPartyNameEN" name="name" class="form-control" placeholder="In English" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Full Name <span style="font-weight: 700;" class="text-primary">*Arb</span></label>
+                        <input type="text" id="SecPartyNameAR" class="form-control" placeholder="In Arabic" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Nationality <span style="font-weight: 700;" class="text-danger">*Eng</span></label>
+                        <input type="text" id="SecPartyNationalityEN"  class="form-control" placeholder="In English" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Nationality <span style="font-weight: 700;" class="text-primary">*Arb</span></label>
+                        <input type="text" id="SecPartyNationalityAR"  class="form-control" placeholder="In Arabic" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Occupation <span style="font-weight: 700;" class="text-danger">*Eng</span></label>
+                        <input type="text" id="SecPartyOccupationEN" class="form-control" placeholder="In English" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="address" class="form-label">Occupation <span style="font-weight: 700;" class="text-primary">*Arb</span></label>
+                        <input type="tel" id="SecPartyOccupationAR" class="form-control" placeholder="In Arabic">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="dob" class="form-label">Salary</label>
+                        <input type="number" id="salary" name="dob" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="SexType" class="form-label">Sex</label>
+                        <select id="SexType" name="SexType" class="form-select" required>
+                            <option value="">Select Sex Type</option>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="dob" class="form-label">Date of Birth</label>
+                        <input type="date" id="DateOfBirth" name="dob" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="address" class="form-label">Passport No</label>
+                        <input type="tel" id="SecPartyPassportNo" class="form-control" placeholder="Passport Number">
+                    </div>
+                </div>
+
+             </fieldset>
+
+
+
+            <div class="text-center">
+                <a id="viewPdf" type="submit" class="btn btn-primary px-4">View Pdf</a> 
+                <a id="downloadPdf"  class="btn btn-success px-4 d-none">Download Pdf</a>
+            </div>
+
+
+        </form>
+    </div>
+
+    <div id="pdf" class="container2 my-5 d-none">
+        <div class="contract-header">
+          <h1>Two-Party Recruitment/Employment Contract</h1>
+    
+            <p class="lead">On this day <span id="dayName" class="text-danger"> </span> of  <span id="topDate" class="text-danger">  </span>….. it was agreed this between: </p>
+        </div>
+    
+        <div class="row">
+            <div class="col-6">
+                <div class="contract-section">
+                    <h3>First Party (Employer)</h3>
+                    <ul>
+                      <li><strong>Name:</strong> <span id="EmployerNameEN">name here</span></li>
+                      <li><strong>Nationality:</strong> <span id="EmployerNationalityEN"></span></li>
+                      <li><strong>Civil ID No.:</strong> <span id="EmployerCivilID"></span></li>
+                      <li><strong>Address:</strong> <span id="EmployerAddressEN"></span></li>
+                      <li><strong>Number of Family Members:</strong> <span id="EmployerFamilyMembers"></span></li>
+                      <li><strong>Type of Residence:</strong> <span id="ResidenceType"></span></li>
+                      <li><strong>Telephone No:</strong> <span id="EmployerTel"></span></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="col-6">
+                <div class="contract-section">
+                    <h3 style="text-align: left;">Second Party (Domestic Worker)</h3>
+                    <ul>
+                      <li><strong>Name:</strong> <span id="DomesticNameEn"></span></li>
+                      <li><strong>Nationality:</strong> <span id="DomesticNationalityEN"></span></li>
+                      <li><strong>Sex: (  Male  /  Female ):</strong> <span id="DomesticSex"></span></li>
+                      <li><strong>Passport No.:</strong> <span id="DomesticPassport"></span></li>
+                      <li><strong>Occupation:</strong> <span id="DomesticOccupationEN"></span></li>
+                      <li><strong>Date of Birth:</strong> <span id="DomesticDateofBirth"></span></li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+    
+        <div class="contract-brief">
+      
+              <p class="lead">Since the first party <span class="text-danger">(Employer)</span> wishes to recruit a domestic worker to work 
+                at his/her household, and the second party <span class="text-danger">(Domestic Worker)</span> wishes to work 
+                for the first party, it is agreed on the following:  </p>
+          </div>
+    
+    
+        <div class="contract-section">
+          <h3 class="inline-h3">First :</h3>
+          <span>The preamble is an integral part of this contract provisions and is 
+            bound to it.</span>
+
+        </div>
+    
+        <div class="contract-section">
+            <h3 class="inline-h3">Second :</h3>
+            <span>The first party acknowledge that he/she have read the Amiri decree 
+                Number 17 of the year 1959 concerning foreigners’ residency and the decrees 
+                complied with it, and decree Number 68 of the year 2015 concerning 
+                domestic workers and the decrees complied with it, and the commitment to 
+                all of the terms and items stated within.</span>
+            <!-- <ul>
+              <li>The first party acknowledge that he/she have read the Amiri decree 
+                Number 17 of the year 1959 concerning foreigners’ residency and the decrees 
+                complied with it, and decree Number 68 of the year 2015 concerning 
+                domestic workers and the decrees complied with it, and the commitment to 
+                all of the terms and items stated within.  </li>
+            </ul> -->
+          </div>
+    
+        <div class="contract-section">
+            <h3>Third: The first party (Employer) must commit to the following; </h3>
+            <ul>
+                <li> Providing an appropriate housing for the second party (Domestic Worker) 
+                     equipped with all necessities and decent means of living. </li>
+                <li> Providing suitable food and clothes for the second party (Domestic Worker) 
+                    in a way that ensures him/her adequate life, and is obligated to provide him/her 
+                    with medical treatment and nursing by registering him/her in the health system 
+                    applicable in the State of Kuwait pursuant to Law No. (1) of the year 1999. </li>
+                <li> Salary must be paid at the end of each Gregorian month starting from the 
+                    first day of work and it should not be less than the designated amount initially 
+                    signed by the second party (Domestic Worker) on the contract, and the money 
+                    transfer receipt is considered proof of receiving the salary. </li>
+    
+            <li>Compensating the second party (Domestic Worker) in case of injury during 
+                work or because of it according to the provisions of Kuwait Civil Law.</li>
+            <li>Issuing a valid residency for the second party (Domestic Worker) for the 
+                duration of the contract in accordance with Amiri decree Number 17 of the 
+                year 1959 concerning foreigners’ residency and the decrees complied with it.</li>
+            <li>Handling all expenses to bring the second party (Domestic Worker) and 
+                should not lay any of these expenses on the second party. </li>
+            <li>Paying the expenses of transferring the second party (Domestic Worker) 
+                deceased body to his/her country as well as sending the salary of the last month 
+                to the second party’s beneficiaries. </li>
+            <li>It is not permissible for the first party (Employer) to assign the second party 
+                (Domestic Worker) to work outside the State of Kuwait. If this occurs without 
+                the agreement of the domestic worker, the domestic worker will be returned to 
+                his/her country at the expense of the first party (Employer). </li>
+            <li>The second party (Domestic Worker) is entitled to own a phone and use it 
+                outside the working hours, provided that he/she keeps the secrets and privacy 
+                of the household, and use such phone in a manner consistent with public morals. </li>
+            </ul>
+          </div>
+    
+        <div class="contract-section">
+          <h3>Fourth: The second party (Domestic Worker) is obligated to the following;</h3>
+          <ul>
+            <li> Do the work he/she is supposed to do by following and complying to all 
+                instructions of the first party (Employer) and his/her family members under 
+                the condition that these instructions do not threaten the second party’s 
+                (Domestic Worker) life or offend his/her dignity, as well as respect the 
+                customs and traditions of the State of Kuwait.  </li>
+            <li> Preserving the secrets, privacy, belongings and money of the first party 
+                (Employer) and his/her family members.  </li>
+            <li> Preserving the secrets, privacy, belongings and money of the first party 
+                (Employer) and his/her family members. </li>
+          </ul>
+        </div>
+    
+        <div class="contract-section">
+            <h3>Fifth: General provisions</h3>
+            <ul>
+                <li>The second party <span class="text-danger" style="font-weight: 600;">(Domestic Worker)</span> works for the first party <span class="text-danger" style="font-weight: 600;">(Employer)</span> 
+                    under the job title of <span class="text-primary" style="font-weight: 600;">HOUSEMAID</span> With a monthly salary of <span class="text-primary" style="font-weight: 600;">(120)</span>  K.D.</li>
+                <li>The contract is effective from the first day of commencing work at the first 
+                    party’s household and is valid for  <span class="text-primary" style="font-weight: 600;"> 2 years </span>as of the date <span class="text-primary" style="font-weight: 600;">26/9/2024 </span>and is 
+                    renewable for longer periods unless one of the parties expresses the desire 
+                    not to renew at least two months before the expiry of the contract.  </li>
+                <li>Second party (Domestic Worker) working hours must not exceed a total of 
+                    12 hours daily, whereas continuous working hours must not exceed 5 hours, 
+                    followed by at least 1 hour resting time which is not included in the overall 
+                    working hours. The second party also has the right to sleep for a continuous 
+                    8 hours minimum at night. </li>
+                <li>Not depriving the second party (Domestic Worker) from the right of having 
+                    a fully paid weekly rest. </li>
+                <li>Not depriving the second party (Domestic Worker) from the right of having 
+                    a fully paid annual leave . </li>
+                <li>An end-of-service bonus payment equivalent to one-month salary for every 
+                    year served by the second party (Domestic Worker) at the end of his/her 
+                    contract. </li>
+                <li>The first party (Employer) is not allowed to keep in his/her possession any 
+                    of the second party's (Domestic Worker) personal identity documents such 
+                    as passport. </li>
+                <li>Transferring the residency of the second party (Domestic Worker) is 
+                    prohibited during the first 6 months from the day of entry to the country . </li>
+                <li>The first party (Employer) shall bear the cost of economy class ticket for 
+                    the second party (Domestic Worker) return back to his/her country at the 
+                    end of the contract or any other renewed periods </li>
+                <li>In case conflict about any of this contract articles, the case will be referred 
+                    to the Public Authority of Manpower for the settlement of the conflict. 
+                    Failed settlements will be referred to the designated court </li>
+                <li>Anything unstated in this contract must be referred to the articles under 
+                    Law No. 68 of the year 2015 in respect to domestic workers rules, and in 
+                    case of lack of law acts that address it, the Kuwaiti laws are applicable </li>
+                <li>This contract has been made in both Arabic and English languages and both 
+                    parties should have full knowledge of the contents of this contract, the 
+                    Arabic text shall prevail and be referred to when necessary.</li>
+                <li>This contract is drawn in original and three copies. The original shall be sent 
+                    to the Public Authority of Manpower, after the arrival of the second party 
+                    (Domestic Worker) and to the country and signing on the contract. The first 
+                    and second copies are for the first party <span class="text-danger" style="font-weight: 600;">(Employer)</span>, whereas the third copy 
+                    shall be given to the second party <span class="text-danger" style="font-weight: 600;">(Domestic Worker)</span> </li>
+    
+            </ul>
+          </div>
+      
+    
+        <div class="signature-section">
+          <div class="signature-line">
+            <p><strong>First Party Signature</strong></p>
+            <div class="data">
+                <strong>Name :</strong> <span class="text-primary" style="font-weight: 600;">ABDU MOHAMMAD ALJNAIDEL  </span> <br>
+                <strong>Ld :</strong> <span class="text-primary" style="font-weight: 600;">6464554555555555555  </span>
+            </div>
+            <p>__________________________</p>
+          </div>
+          <div class="signature-line">
+            <p><strong>Second Party Signature</strong></p>
+            <div class="data">
+                <strong>Name :</strong> <span class="text-primary" style="font-weight: 600;">ABDULLAH HUMOUD MOHAMMAD ALJNAIDEL  </span> <br>
+                <strong>Passport :</strong> <span class="text-primary" style="font-weight: 600;">A1575#3924  </span>
+            </div>
+            <p>__________________________</p>
+          </div>
+        </div>
+    
+        <div class="signature-section">
+            <div class="signature-line">
+              <p><strong>Seal of SLBFE </strong></p>
+              <p style="font-size: 20px; font-weight: 600; margin-top: -17px;">ختم اللجنة لتوظيف الخارجي</p>
+            </div>
+            <div class="signature-line">
+              <p><strong>Second Party Signature</strong></p>
+              <p style="font-size: 20px; font-weight: 600; margin-top: -17px;">ختم السفارة</p>
+            </div>
+          </div>
+    
+        <div class="text-center mt-4">
+          <p>Signed on [Date]</p>
+        </div>
+        <hr>
+    
+    
+        <div class="more-info">
+            <h2>Statement to be submitted by the sponsor to recruit Sri Lankans without an Agency </h2>
+    
+            <div class="office">
+                <span>Office use: </span> 
+                <input type="text">
+            </div>
+    
+            <div class="info">
+                <p class="date">Date: 18/7/2016 </p>
+                <p>I wish to employ Mr./Mr. <strong>PRADEEPARAM ARASALA KUMAR</strong> holder of Sri Lanka Passport No. <strong>(N 
+                    6190369)</strong>  as <Strong>(Houseboy)</Strong> for a period of two Years at a salary of KD 100 per month at my residence 
+                    in Kuwait as per the/ employment contract enclosed. Further, following additional facilities also will 
+                    be provided at my cost. 
+                    <ul>
+                        <li>Economy class air ticket from </li>
+                        <li>Sri Lanka to Kuwait. </li>
+                        <li>Repatriation to Sri Lanka if the worker being unhappy / dissatisfied with working and living 
+                            conditions and if he / she intends to return to Sri Lanka before expiry of the contract period. </li>
+                        <li>In respect of drivers, driving license for the worker. </li>
+                    </ul>
+                 </p>
+            </div>
+    
+            <h2>I am aware that the passport of the worker being property of the Government of  
+                Sri Lanka shall be produced to the Embassy of Sri Lanka when called for. </h2>
+    
+            <div class="sponsor">
+                <div class="spon">
+                    <strong class="stro">Sponsor's Signature: </strong> <br>
+                    <span></span>
+                </div>
+                <div class="spon">
+                    <strong class="stro">Sponsor's Name & Address: </strong>  <br>
+                    <span>Abdulkareem Basheer Salboukh Faraj   
+                        Salwa, Block (3), St. (2), Home (14) </span>
+                </div>
+                <div class="spon">
+                    <strong class="stro">Sponsor's ID No.:  </strong> <br>
+                    <span>00048946534643</span>
+                </div>
+                <div class="spon">
+                    <strong class="stro">Sponsor's contact Nos. Mobile & Res. No.:   </strong> <br>
+                    <span>66344645 </span>
+                </div>
+            </div>
+        </div>
+      </div>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>

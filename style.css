@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: justify;
+  }
+
+
+.container2{
+    max-width: 1000px;
+        /* background: #fff; */
+        padding: 80px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        margin: auto;
+
+}
+.contract-header {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: -40px;
+}
+.contract-brief {
+  margin-bottom: 40px;
+}
+
+.lead{
+    font-weight: 550;
+}
+
+.contract-section {
+  margin-bottom: 30px;
+}
+
+.contract-section h3{
+    font-weight: 600;
+}
+
+.contract-section .inline-h3{
+    display: inline;
+}
+
+.contract-section ul li{
+    margin-bottom: 10px;
+    list-style-type:decimal ;
+}
+.signature-section {
+  display: flex;
+  justify-content: space-between;
+}
+.signature-line {
+  width: 50%;
+  /* border-bottom: 1px solid #000; */
+  text-align: center;
+  padding: 10px 0;
+}
+
+.signature-line .data{
+    font-size: 14px;
+}
+
+.more-info h2{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: underline;
+    padding: 3px;
+    margin-bottom: 30px;
+}
+
+.more-info .office{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.more-info .office input{
+    width: 300px;
+    height: 80px;
+}
+
+.more-info .info .date{
+    font-weight: 700;
+}
+
+.more-info .sponsor .spon{
+    font-weight: 700;
+    width: 40%;
+    padding-bottom: 20px;
+}
+.more-info .sponsor .spon .stro{
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
